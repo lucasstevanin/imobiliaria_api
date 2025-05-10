@@ -25,6 +25,7 @@ Permite o cadastro, listagem e filtros por tipo e faixa de preço, com documenta
 - Swagger
 - class-validator
 - ts-node
+- Render (para deploy)
 
 ---
 
