@@ -47,3 +47,11 @@ cd imobiliaria-api
 ```
 
 ### 2. Instale as dependencias
+```bash
+npm install ou yarn install
+```
+
+### 3. Rode a API
+```bash
+npm run start:dev
+```
