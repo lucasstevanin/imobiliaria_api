@@ -102,7 +102,7 @@ ngrok http 3000
 
 - Cumprimente a assistente para ter uma saudação inicial (Foi utilizado a IA da groq para uma fluidez na conversa)
 - Pode ser pesquisado imoveis por tipo ("Quero um apartamento") e será retornado todos os apartamentos disponiveis
-- Poder ser por faixa de valor e tipo ("Quero casa de 100000 até 560000") ou ("Casa de até 500000")
+- Poder ser por faixa de valor e tipo ("Quero casas de 100000 até 560000") ou ("Casas de até 500000")
 
 - Todos os valores virão formatados dentro do próprio chat interno do N8N
 - Foi utilizado memoria temporaria para até 5 mensagens anteriores (para maior fluidez)
