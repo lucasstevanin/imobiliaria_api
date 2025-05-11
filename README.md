@@ -70,7 +70,16 @@ npm run start:dev
 
 ## 🧪 Como rodar a automação no N8N
 
-- Teste o deploy (https://imobiliaria-api.onrender.com/swagger), caso esteja funcional, pule o passos de 1 a 4 abaixo:
+- Baixe o arquivo .json em [drive](https://drive.google.com/drive/folders/1zXEpG3nkj-XVN50Zi94h_qIB1o-z5CgP?usp=sharing)
+
+- Crie um novo workflow no N8N
+
+- No canto superior direito clique nos "..." e importe o arquivo .json
+
+- Teste o deploy (https://imobiliaria-api.onrender.com/swagger), caso esteja funcional, pule os passo de 1 a 4 abaixo:
+
+- Caso necessário, copie o link (https://imobiliaria-api.onrender.com/properties) e insira dentro do nó chamado "HTTP Request" no campo URL do N8N
+
 
 ### 1. Rode a API
 ```bash
@@ -93,7 +102,7 @@ ngrok http 3000
 
 - Cumprimente a assistente para ter uma saudação inicial (Foi utilizado a IA da groq para uma fluidez na conversa)
 - Pode ser pesquisado imoveis por tipo ("Quero um apartamento") e será retornado todos os apartamentos disponiveis
-- Poder ser por faixa de valor e tipo ("Casa de 100.000 até 560.000") ou ("Casa de até 500.000")
+- Poder ser por faixa de valor e tipo ("Quero casa de 100000 até 560000") ou ("Casa de até 500000")
 
 - Todos os valores virão formatados dentro do próprio chat interno do N8N
 - Foi utilizado memoria temporaria para até 5 mensagens anteriores (para maior fluidez)
