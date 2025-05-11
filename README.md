@@ -78,7 +78,7 @@ npm run start:dev
 ```
 
 ### 2. Instale o ngrok na sua maquina e autentique, após isso rode no terminal
-- Isso roda
+- Faz com que a API tenha uma URL pública para usar no N8N
 ```bash
 ngrok http 3000
 ```
