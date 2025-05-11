@@ -8,6 +8,13 @@ async function bootstrap() {
   const app = await NestFactory.createApplicationContext(AppModule);
   const service = app.get(PropertyService);
 
+  const existing = await service.findAll();
+  if (existing.length > 0) {
+    console.log('Seed ignorado: já existem imóveis no banco.');
+    await app.close();
+    return;
+  }
+
   const properties: CreatePropertyDto[] = [
     {
       title: 'Casa de campo',
