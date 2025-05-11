@@ -5,12 +5,18 @@ Permite o cadastro, listagem e filtros por tipo e faixa de preço, com documenta
 
 ---
 
+## Documentação Swagger
+
+- [Documentação API](https://imobiliaria-api.onrender.com/swagger) ou (https://localhost:3000/swagger)
+
+---
+
 ## 🚀 Funcionalidades
 
 - ✅ Cadastro de imóveis (`POST /properties`)
 - ✅ Listagem de imóveis (`GET /properties`)
 - ✅ Filtro por tipo (`HOME`, `APARTMENT`, `KITNET`)
-- ✅ Filtro por faixa de preço (`min`, `max`)
+- ✅ Filtro por faixa de preço e tipo (`min`, `max`, `type`)
 - ✅ Validação de dados via `class-validator`
 - ✅ Documentação automática via Swagger
 - ✅ Script de seed para popular o banco com mais de 20 imóveis
@@ -25,7 +31,9 @@ Permite o cadastro, listagem e filtros por tipo e faixa de preço, com documenta
 - Swagger
 - class-validator
 - ts-node
-- Render (para deploy)
+
+- Render (para deploy) ou NGROK (para rodar local/publicamente)
+- groq IA
 
 ---
 
@@ -35,6 +43,7 @@ Permite o cadastro, listagem e filtros por tipo e faixa de preço, com documenta
 - npm ou yarn
 - Git (opcional, para clonar o projeto)
 - ts-node instalado globalmente ou como dependência do projeto
+- [NGROK](https://ngrok.com/downloads) (opcional, caso o deploy esteja off por conta do plano limitado do Render)
 
 ---
 
@@ -56,3 +65,35 @@ npm install ou yarn install
 ```bash
 npm run start:dev
 ```
+
+---
+
+## 🧪 Como rodar a automação no N8N
+
+- Teste o deploy (https://imobiliaria-api.onrender.com/swagger), caso esteja funcional, pule o passos de 1 a 4 abaixo:
+
+### 1. Rode a API
+```bash
+npm run start:dev
+```
+
+### 2. Instale o ngrok na sua maquina e autentique, após isso rode no terminal
+- Isso roda
+```bash
+ngrok http 3000
+```
+
+### 3. Pegue o link gerado pelo NGROK e insira dentro do nó chamado "HTTP Request" no campo URL do N8N
+
+### 4. Caso seja necessário, gere uma chave de API da IA groq para poder usá-la. Gere em [groq](groq.com)
+
+---
+
+## 🧪 Instruções para a automação
+
+- Cumprimente a assistente para ter uma saudação inicial (Foi utilizado a IA da groq para uma fluidez na conversa)
+- Pode ser pesquisado imoveis por tipo ("Quero um apartamento") e será retornado todos os apartamentos disponiveis
+- Poder ser por faixa de valor e tipo ("Casa de 100.000 até 560.000") ou ("Casa de até 500.000")
+
+- Todos os valores virão formatados dentro do próprio chat interno do N8N
+- Foi utilizado memoria temporaria para até 5 mensagens anteriores (para maior fluidez)
